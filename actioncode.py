@@ -8,6 +8,7 @@ def play(client, userdata, msg):
     data = json.loads(msg.payload.decode("utf-8"))
     session_id = data['sessionId']
     MM2('play', {})
+    say(session_id, "der Song wird fortgesetzt")
 
 def MM2(intentname, action):
     mqtt_client.publish(('external/MagicMirror2/HideShowMove/' + intentname),
