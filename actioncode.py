@@ -22,5 +22,7 @@ client = mqtt.Client()
 
 if __name__ == "__main__":
          client.on_connect = on_connect
-         client.message_callback_add("hermes/intent/sohn:play/#", play)
+         client.message_callback_add("hermes/intent/test12345:play/#", play)
+         mqtt_client.connect("localhost", "1883")
+         mqtt_client.loop_forever()
 
