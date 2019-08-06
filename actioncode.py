@@ -18,11 +18,11 @@ def say(session_id, text):
                         json.dumps({'text': text, "sessionId": session_id}))
 
 
-client = mqtt.Client()
+mqtt_client = mqtt.Client()
 
 if __name__ == "__main__":
-         client.on_connect = on_connect
-         client.message_callback_add("hermes/intent/test12345:play/#", play)
-         mqtt_client.connect("localhost", "1883")
+         mqtt_client.on_connect = on_connect
+         mqtt_client.message_callback_add("hermes/intent/test12345:play/#", play)
+         mqtt_client.connect("localhost", 1883)
          mqtt_client.loop_forever()
 
