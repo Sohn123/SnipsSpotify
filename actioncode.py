@@ -30,6 +30,8 @@ def search(client, userdata, msg):
            query = query + "+"
     query = query + '", "random": "false"}'
     print(query)
+    text = "Mache ich"
+    say(session_id, text)
     MM2search("SPOTIFY_SEARCH", query)
 def MM2search(intentname, action):
     mqtt_client.publish(("external/MagicMirror2/Spotify/" + intentname),
