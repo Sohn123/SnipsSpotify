@@ -1,2 +1,3 @@
 paho-mqtt
 hermes-python>=0.2
+git+https://github.com/plamere/spotipy.git
